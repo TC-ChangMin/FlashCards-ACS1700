@@ -1,0 +1,74 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    line-height: 1.45;
+  }
+  button {
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: darkcyan;
+    color: white;
+    font-size: 1rem;
+  }
+  #answer-button {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+  }
+  html, body {
+    height: 100%;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  main {
+    height: 100%;
+    min-width: 600px;
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #q-container {
+    width: 600px;
+    height: 300px;
+    margin: 1rem auto;
+    position: relative;
+    perspective: 900px;
+  }
+  #q-card, #a-card {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    position: absolute;
+    backface-visibility: hidden;
+    border: 1px solid;
+    border-radius: 1rem;
+  }
+  #q-card {
+    background-color: lightblue;
+  }
+  
+  #a-card {
+    background-color: pink;
+    transform: rotateY(180deg);
+  }
+  #a-card > div {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+  } 
+  #flip-card {
+    width: 100%;
+    height: 100%;
+    transition: transform 400ms;
+    transform-style: preserve-3d;
+  }
+  #flip-card.flip {
+    transform: rotateY(180deg);
+  }
